@@ -6,18 +6,21 @@ function getComputerChoice() {
   return choicesNames[ChoiceNumber];
 }
 function playRound(playerSelection, computerSelection) {
+  let newNode = document.createElement('div');
+newNode.innerHTML = data;
+theDiv.appendChild(newNode);
   console.log(`${playerSelection} VS. ${computerSelection}`);
   playerSelection = playerSelection.toLowerCase();
   computerSelection = computerSelection.toLowerCase();
   if (playerSelection === 'rock') {
     if (computerSelection === 'rock') {
-      return console.log("It's a Tie!");
+      return document.getElementById('text').innerHTML("It's a Tie!");
     } else if (computerSelection === 'paper') {
       computerScore++;
-      return console.log('You lose! Paper beats Rock');
+      return document.getElementById('text').innerHTML('You lose! Paper beats Rock');
     } else if (computerSelection === 'scissors') {
       playerScore++;
-      return console.log('You win! Rock beats Scissors');
+      return document.getElementById('text').innerHTML('You win! Rock beats Scissors');
     }
     return 'Incorrect computer Selection!';
   } else if (playerSelection === 'paper') {
